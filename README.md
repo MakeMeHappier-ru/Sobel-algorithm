@@ -1,7 +1,5 @@
 # Sobel-algorithm
 
-# Image Processing Application
-
 A simple WPF-based image editor with basic filtering and correction capabilities.
 
 ## Features
