@@ -1,0 +1,30 @@
+﻿<Window x:Class="App.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:App"
+        mc:Ignorable="d"
+        Title="App" Height="522" Width="800" WindowStyle="ThreeDBorderWindow" Icon="/free-icon-group-theory-4525887.png">
+    <Grid x:Name="App" Background="#FFA1FFF9">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="373*"/>
+            <RowDefinition Height="111*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="193*"/>
+            <ColumnDefinition Width="207*"/>
+            <ColumnDefinition Width="200*"/>
+            <ColumnDefinition Width="200*"/>
+        </Grid.ColumnDefinitions>
+        <Image x:Name="PictureBox_Load" Height="334" Margin="31,30,31,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+        <Image x:Name="PictureBox_Safe" Height="334" Margin="31,30,31,0" VerticalAlignment="Top" Grid.Column="2" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+        <Button x:Name="Button1" Content="Загрузить" Margin="31,10,10,0" VerticalAlignment="Top" Grid.Row="1" Height="74" Click="Button1_Click" FontFamily="Calibri" FontSize="20"/>
+        <Button x:Name="Button_Safe" Grid.Column="1" Content="Сохранить" VerticalAlignment="Top" Grid.Row="1" Height="74" Click="Button_Safe_Click" FontFamily="Calibri" FontSize="20" Margin="10,10,57,0"/>
+        <Button x:Name="contrast" Grid.Column="2" Content="Контраст" Margin="50,10,10,0" Grid.Row="1" VerticalAlignment="Top" Height="74" FontFamily="Calibri" FontSize="20" IsEnabled="False" Click="contrast_Click"/>
+        <Button x:Name="gradient" Grid.Column="3" Content="Фильтр Собеля" Margin="10,10,50,0" Grid.Row="1" VerticalAlignment="Top" Height="74" FontFamily="Calibri" FontSize="20" IsEnabled="False" Click="gradient_Click"/>
+        <TextBlock Grid.Column="3" HorizontalAlignment="Left" Margin="688,302,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+        <Slider x:Name="Kontrast" Grid.Column="2" TickFrequency="1"  IsSnapToTickEnabled="True" HorizontalAlignment="Left" Margin="50,89,0,0" Grid.Row="1" VerticalAlignment="Top" Width="140" LargeChange="0" Minimum="-100" Maximum="100" SmallChange="1" TickPlacement="BottomRight"/>
+        <TextBox x:Name="Textbox" Text="{Binding ElementName= Kontrast, Path=Value, UpdateSourceTrigger=PropertyChanged}" Grid.Column="2" HorizontalAlignment="Left" Margin="10,87,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="34" Height="17"/>
+    </Grid>
+</Window>
